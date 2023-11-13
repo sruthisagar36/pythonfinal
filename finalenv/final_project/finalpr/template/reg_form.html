@@ -1,0 +1,79 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <center>
+    <h1><b>REGISTRATION FORM</b>
+     </center></h1>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body style="background-image:url({% static 'images/bank.jpg' %});padding:10px;line-height:30px;">
+<form method="POST" action="reg_form.html">
+    {% csrf_token %}
+    <label title="NAME"> NAME </label><br>
+    <input type="text" name="name"><br>
+    <label title="DOB"> DOB </label><br>
+    <input type="date" name="dob" ><br>
+    <label title="AGE"> AGE </label><br>
+    <input type="number" name="age" ><br>
+    <label title="GENDER"> GENDER </label><br>
+   <input type="radio" name="gender">MALE &nbsp;
+    <input type="radio" name="gender">FEMALE<br>
+   <label title="PHONE NUMBER"> PHONE NUMBER </label>&nbsp;<br>
+    <input type="tel" name="phone"><br>
+    <label title="EMAIL"> EMAIL ID </label>&nbsp;<br>
+    <input type="email" name="email"><br>
+    <label title="ADDRESS"> ADDRESS </label>&nbsp;<br>
+    <input type="text" name="address"><br>
+    <label title="district">DISTRICT</label><br>
+    <select name="district" id="district">
+        <option value="palakkad">PALAKKAD</option>
+          <option value="p1">P1</option>
+            <option value="p2">P2</option>
+            <option value="p3">P3</option>
+            <option value="p4">P4</option>
+            <option value="p5">P5</option>
+        <option value="kozhikkode">KOZHIKKODE</option>
+           <option value="k1">K1</option>
+            <option value="k2">K2</option>
+            <option value="k3">K3</option>
+            <option value="k4">K4</option>
+            <option value="k5">K5</option>
+        <option value="kochi">KOCHI</option>
+            <option value="kc1">KC1</option>
+            <option value="kc2">KC2</option>
+            <option value="kc3">KC3</option>
+            <option value="kc4">KC4</option>
+            <option value="kc5">KC5</option>
+        <option value="malappuram">MALAPPURAM</option>
+            <option value="m1">M1</option>
+            <option value="m2">M2</option>
+            <option value="m3">M3</option>
+            <option value="m4" >M4</option>
+            <option value="m5">M5</option>
+
+        <option value="thrissur">THRISSUR</option>
+            <option value="t1">T1</option>
+            <option value="t2">T2</option>
+            <option value="t3">T3</option>
+            <option value="t4">T4</option>
+            <option value="t4">T5</option>
+
+    </select><br>
+
+    <label title="account">ACCOUNT TYPE</label><br>
+        <select name="account">
+           <option value="savings">SAVINGS ACCOUNT</option>&nbsp;
+           <option value="current">CURRENT ACCOUNT</option>
+        </select><br>
+    <label title="material">MATERIALS PROVIDE </label><br>
+    <input type="checkbox" name="material" placeholder="MATERIALS PROVIDE">CREDIT CARD<br>
+    <input type="checkbox" name="material" placeholder="MATERIALS PROVIDE">DEBIT CARD<br>
+    <input type="checkbox" name="material" placeholder="MATERIALS PROVIDE">CHEQUE<br>
+<a class="btn btn-primary" href="{% url 'demo' %}" type="submit" >SUBMIT</a>
+<a class="btn btn-primary" href="{% url 'demo' %}" type="button">Logout</a>
+</form>
+
+</body>
+</html>
